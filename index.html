@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href ="./css/index.css"rel = "stylesheet"/>
     <title> QUIZ PRO </title>
+    <style>
+        .flex-container{
+    display: flex;        
+    flex-wrap: wrap;
+    background-color: azure;
+        }
+    </style>
 </head>
 <body>
     <div id="top-bar">
@@ -15,6 +22,39 @@
     <div id="search-bar">
         <input type="text", placeholder="search"/>
         <button> search </button>
+    </div>
+
+    <div id="biases">
+        <form action="/submit-form" method="POST">
+            <label for="category">Category:</label><br>
+            <select id="category" name="category" required>
+                <option value="1">Physics</option>
+                <option value="2">Biology</option>
+                <option value="3">Cars</option>
+                <option value="4">Geography</option>
+                <option value="5">Sports</option>
+                <option value="6">Movies</option>
+                <option value="7">History</option>
+                <option value="8">Business</option>
+                <option value="9">General Knowledge</option>
+                <option value="10">Books</option>
+                <option value="11">Film</option>
+              
+            </select><br>
+            
+            <label for="dificulty">Level:</label><br>
+            <select id="difficulty" name="difficulty" required>
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+
+            </select><br>
+            
+            <label for="number">How many questions</label><br>
+            <input type="number" id="number" name="amount" min="1" max="50" required><br>
+    
+            <input type="submit" value="Start Quiz">
+        </form>
     </div>
     <script src="./src/index.js"></script>
 </body>
