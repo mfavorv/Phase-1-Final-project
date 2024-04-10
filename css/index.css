@@ -4,3 +4,28 @@ color: black;
 font-size: x-large;
 padding: 10;
 }
+
+#search-bar{
+    margin-top: 10px;
+    padding: 10px; 
+}
+
+#search-bar input{
+    padding: 6px 6px;
+    margin: 8px;
+    border: 2px solid darkolivegreen;
+    border-radius: 5px ;
+}
+
+#search-bar button{
+   background-color: darkgrey; 
+   padding: 10px;
+   border-radius: 10px;
+   cursor: pointer;
+}
+
+#search-bar button:hover{
+    background-color: darkslategrey;
+     padding:9px 19px;
+    margin: 1px 2px;
+    color: white;}
