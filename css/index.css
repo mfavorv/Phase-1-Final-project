@@ -1,5 +1,4 @@
 #top-bar{
-background-color: darkcyan;
 color: black;
 font-size: 40px;
 padding: 10px;
@@ -17,37 +16,10 @@ text-align: center;
 .logo-container #logo{
     float:right;
     width: 8%;
-    height: 35%
-}
-.search-container{
-    display: flex; 
-    max-width: 600px; 
-    margin: 0 auto; 
-}
-#search-bar{
-    margin-top: 10px;
-    padding: 10px; 
+    height: 35%;
+    background: #333;
 }
 
-#search-bar input{
-    padding: 4px 4px;
-    margin: 5px;
-    border: 2px solid darkolivegreen;
-    border-radius: 5px ;
-}
-
-#search-bar button{
-   background-color: darkgrey; 
-   padding: 10px;
-   border-radius: 10px;
-   cursor: pointer;
-}
-
-#search-bar button:hover{
-    background-color: darkslategrey;
-     padding:9px 19px;
-    margin: 1px 2px;
-    color: white;}
 
 #quiz-form {
     max-width: 400px;
@@ -98,11 +70,11 @@ input[type="submit"]:hover {
 }
 
 html body{
-    background-color: azure;
+    background-image: url(https://i.pinimg.com/236x/25/20/14/252014bbc0cc13a083b381f631fb784d.jpg);
 
 }
 
 #top-bar p{
-    color: #ccc;
+    color: black;
     font-size: 19px;
 }
