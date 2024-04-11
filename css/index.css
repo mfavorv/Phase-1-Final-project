@@ -2,7 +2,7 @@
 background-color: grey;
 color: black;
 font-size: x-large;
-padding: 10;
+padding: 10px;
 }
 
 .search-container{
@@ -85,4 +85,11 @@ input[type="submit"]:hover {
 
 body{
     background-color: azure;
+}
+
+img#Logo{ 
+ width: 27px;
+ height:27px;
+float: left;
+background-color: grey;
 }
