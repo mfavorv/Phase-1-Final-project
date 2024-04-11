@@ -1,10 +1,24 @@
 #top-bar{
-background-color: grey;
+background-color: darkcyan;
 color: black;
-font-size: x-large;
+font-size: 40px;
 padding: 10px;
+width: 70%;
+text-align: center;
 }
 
+.logo-container #image{
+    float: left;
+    width: 8%;
+    height: 35%;
+    
+}
+
+.logo-container #logo{
+    float:right;
+    width: 8%;
+    height: 35%
+}
 .search-container{
     display: flex; 
     max-width: 600px; 
@@ -83,13 +97,12 @@ input[type="submit"]:hover {
     color: #333;
 }
 
-body{
+html body{
     background-color: azure;
+
 }
 
-img#Logo{ 
- width: 27px;
- height:27px;
-float: left;
-background-color: grey;
+#top-bar p{
+    color: #ccc;
+    font-size: 19px;
 }
