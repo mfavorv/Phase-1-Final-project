@@ -22,21 +22,9 @@
 </div>
 
     <div id="biases">
-        <form action="/submit-form" method="POST">
+        <form>
             <label for="category">Category:</label><br>
-            <select id="category" name="category" required>
-                <option value="1">Physics</option>
-                <option value="2">Biology</option>
-                <option value="3">Cars</option>
-                <option value="4">Geography</option>
-                <option value="5">Sports</option>
-                <option value="6">Movies</option>
-                <option value="7">History</option>
-                <option value="8">Business</option>
-                <option value="9">General Knowledge</option>
-                <option value="10">Books</option>
-                <option value="11">Film</option>
-              
+            <select id="category" name="category" required>              
             </select><br>
             
             <label for="dificulty">Level:</label><br>
@@ -50,9 +38,13 @@
             <label for="number">How many questions</label><br>
             <input type="number" id="number" name="amount" min="1" max="50" required><br>
     
-            <input type="submit" value="Start Quiz">
+            <input id="begin" type="submit" value="Start Quiz">
         </form>
     </div>
+    <div id="quiz-container">
+        <!-- questions go here -->
+    </div>
+    <div id="result"></div>
     <script src="./src/index.js"></script>
 </body>
 </html>
