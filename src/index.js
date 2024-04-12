@@ -49,6 +49,11 @@ document.addEventListener("DOMContentLoaded", () => {
                         const multipleChoices = document.createElement("div");
                         multipleChoices.classList.add("answer-option");
 
+                        const radioInput = document.createElement("input");
+                            radioInput.type = "radio";
+                            radioInput.name = `answer_${index}`;
+                            radioInput.value = answer;
+                            multipleChoices.appendChild(radioInput);
 
                 })
 
