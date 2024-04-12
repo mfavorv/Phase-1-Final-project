@@ -19,7 +19,8 @@ document.addEventListener("DOMContentLoaded", () => {
             .catch(error => console.error("Error:", error));
     };
     fetchCategories();
-     //START QUIZ FUNCTION
+
+ //START QUIZ FUNCTION
      function startQuiz() {
         const startQuizButton = document.getElementById("begin");
         startQuizButton.addEventListener("click", (event) => {
@@ -63,9 +64,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 });
                 questions.appendChild(questionElement);
         })
+    })
         .catch(error => console.error("Error in fetching questions:", error));
             
-        //RETRY BUTTON
+//RETRY BUTTON
             const retryButton = document.createElement("button");
             retryButton.textContent = "Retake Quiz"; 
             retryButton.addEventListener("click", () => {
@@ -82,7 +84,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 
             });
             document.body.appendChild(retryButton);
-            //SUBMIT BUTTON
+
+//SUBMIT BUTTON
     const submitButton = document.createElement("button");
     submitButton.textContent = "Submit"; 
     submitButton.addEventListener("click", () => {
@@ -96,12 +99,15 @@ document.addEventListener("DOMContentLoaded", () => {
                 results++;
             }
         });
-
-
-
-
+        const resultContainer = document.getElementById("result");
+        resultContainer.textContent = `You got ${results} out of ${amount} questions correct.`;
+        submitButton.disabled = true;
+        submitButton.remove();
+        startQuiz();
     })
-})
+    
+    document.body.appendChild(submitButton);   
+
      })
     }
     startQuiz()
