@@ -82,9 +82,28 @@ document.addEventListener("DOMContentLoaded", () => {
                 
             });
             document.body.appendChild(retryButton);
+            //SUBMIT BUTTON
+    const submitButton = document.createElement("button");
+    submitButton.textContent = "Submit"; 
+    submitButton.addEventListener("click", () => {
+        results = 0;
+        const radioButtons = document.querySelectorAll('input[type="radio"]:checked');
+
+        radioButtons.forEach(radioButton => {
+            const selectedAnswer = radioButton.value;
+         
+            if (selectedAnswer === data.correct_answer) {
+                results++;
+            }
+        });
+
+
+
+
     })
 })
-     }
+     })
+    }
     startQuiz()
 
 })
