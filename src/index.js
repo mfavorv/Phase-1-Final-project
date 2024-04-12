@@ -99,12 +99,23 @@ document.addEventListener("DOMContentLoaded", () => {
                 submitButton.remove();
             });
                 questionsContainer.appendChild(retryButton);
+
+                submitButton.addEventListener("mouseover", () => {
+                    submitButton.style.backgroundColor = "darkgreen";
+                });
+
+                submitButton.addEventListener("mouseout", () => {
+                    submitButton.style.backgroundColor = "";
             })
-      
-            .catch(error => console.error("Error fetching questions:", error));
-    
+                  retryButton.addEventListener("mouseover", () => {
+                retryButton.style.backgroundColor = "darkgreen";
+            });
+            retryButton.addEventListener("mouseout", () => {
+                retryButton.style.backgroundColor = "";
+            });
+        })
+        .catch(error => console.error("Error fetching questions:", error));
             
-    
         };
 
 // START QUIZ BUTTON
