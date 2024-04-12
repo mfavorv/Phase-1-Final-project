@@ -44,12 +44,18 @@ document.addEventListener("DOMContentLoaded", () => {
                         paragraph.textContent = `${index + 1}. ${question.question}`;
                         questionElement.appendChild(paragraph);
 
+                        const answers = [...question.incorrect_answers, question.correct_answer];
+                        answers.forEach(answer => {
+                        const multipleChoices = document.createElement("div");
+                        multipleChoices.classList.add("answer-option");
+
 
                 })
 
         })
     })
-}
+})
+     }
     startQuiz()
 
 })
