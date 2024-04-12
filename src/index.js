@@ -55,7 +55,13 @@ document.addEventListener("DOMContentLoaded", () => {
                             radioInput.value = answer;
                             multipleChoices.appendChild(radioInput);
 
-                })
+                            const answerText = document.createElement("label");
+                            answerText.textContent = answer;
+                            multipleChoices.appendChild(answerText);
+
+                            questionElement.appendChild(multipleChoices);
+                });
+                questions.appendChild(questionElement);
 
         })
     })
