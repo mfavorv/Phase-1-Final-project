@@ -32,8 +32,24 @@ document.addEventListener("DOMContentLoaded", () => {
             questions = document.getElementById("quiz-container");
             questions.innerHTML = ""; 
 
+            const apiUrl = `https://opentdb.com/api.php?amount=${amount}&category=${category}&difficulty=${difficulty}&type=multiple`;
+            fetch(apiUrl)
+                .then(res => res.json())
+                .then(data => {
+                    data.results.forEach((question, index) => {
+                        const questionElement = document.createElement("div");
+                        questionElement.classList.add("question");
+
+                        const paragraph = document.createElement("p");
+                        paragraph.textContent = `${index + 1}. ${question.question}`;
+                        questionElement.appendChild(paragraph);
+
+
+                })
+
         })
-    }
+    })
+}
     startQuiz()
 
 })
