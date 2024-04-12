@@ -68,6 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
  // SUBMIT BUTTON
                 const submitButton = document.createElement("button");
+                submitButton.id = "submit";
                 submitButton.textContent = "Submit";
                 submitButton.addEventListener("click", () => {
                     let score = 0;
@@ -86,9 +87,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 //RETRY BUTTON
                 const retryButton = document.createElement("button");
+                retryButton.id = "retry";
                 retryButton.textContent = "Retake Quiz";
                
                 retryButton.addEventListener("click", () => {
+                resultContainer.textContent = "";
                 startQuiz();
                 retryButton.disabled = true;
                 retryButton.remove();
@@ -100,7 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
             .catch(error => console.error("Error fetching questions:", error));
     };
 
-    // START QUIZ BUTTON
+// START QUIZ BUTTON
     startQuizButton.addEventListener("click", (event) => {
         event.preventDefault();
         startQuiz();
