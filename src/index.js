@@ -100,8 +100,12 @@ document.addEventListener("DOMContentLoaded", () => {
             });
                 questionsContainer.appendChild(retryButton);
             })
+      
             .catch(error => console.error("Error fetching questions:", error));
-    };
+    
+            
+    
+        };
 
 // START QUIZ BUTTON
     startQuizButton.addEventListener("click", (event) => {

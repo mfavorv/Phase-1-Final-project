@@ -79,3 +79,20 @@ html body{
     font-size: 19px;
 }
 
+#submit{
+    background-color: #333;
+    border-radius: 45%;
+    color: white;
+    padding: 7px 15px;
+    font-size: medium;
+    margin: 27px
+}
+
+#retry{
+    background-color: #333;
+    border-radius: 40%;
+    color: white;
+    padding: 7px 15px;
+    font-size: medium;
+    margin: 27px;
+}
