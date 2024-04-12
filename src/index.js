@@ -62,8 +62,26 @@ document.addEventListener("DOMContentLoaded", () => {
                             questionElement.appendChild(multipleChoices);
                 });
                 questions.appendChild(questionElement);
-
         })
+        .catch(error => console.error("Error in fetching questions:", error));
+            
+        //RETRY BUTTON
+            const retryButton = document.createElement("button");
+            retryButton.textContent = "Retake Quiz"; 
+            retryButton.addEventListener("click", () => {
+                questions.innerHTML = ""; 
+                results = 0;
+                retryButton.disabled = true;
+                retryButton.remove();
+               
+                submitButton.disabled = true;
+                submitButton.remove();
+               
+                startQuiz();
+                
+                
+            });
+            document.body.appendChild(retryButton);
     })
 })
      }
